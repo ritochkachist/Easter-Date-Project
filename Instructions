@@ -1,0 +1,26 @@
+The date for any Easter Sunday can be computed as follows:
+
+   1.	Prompt the user and read in the year for which the date of Easter is wanted.
+
+   2.	Do the following calculations.
+		Let a be the remainder from dividing year by 19
+		Let b be the remainder from dividing year by 4
+		Let c be the remainder from dividing year by 7
+		Let d be (19 * a + 24) % 30
+		Let e be (2 * b + 4 * c + 6 * d + 5) % 7
+
+   3.	Then the date for Easter Sunday is March (22 + d + e).  Note that this formula can give a date in April if the value of (22 +d + e) is greater than 31.  You should print the correct date.  For example, if the date comes out as 28 print March 28; if the date comes out as 33 print April 2.
+
+
+Write your program so that it will read the year from the key¬board and write the date for Easter to the screen.  Be sure that you test dates that fall in March and in April.  For example:
+
+	Enter the year
+	1992
+	Easter is Sunday, April 19 in 1992
+	
+	Enter the year
+	2016
+	Easter is Sunday, March 27 in 2016
+
+
+Note:  This algorithm works correctly for any year from 1900 to 2099 with the exception of 4 years. The problem is that the program produces a date that is 7 days later than it should be for the years 1954, 1981, 2049, and 2076.  Be sure to add code to check for those dates and adjust the program to correct the error.
